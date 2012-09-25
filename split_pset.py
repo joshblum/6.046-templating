@@ -39,8 +39,9 @@ def split_pset():
     if (not options.pset or not options.probs):
         print_err_and_die("You must enter both arguements! run with -h for help")
 
+    path = "pset%s/latex/"%options.pset
     try:
-        filename = "latex/pset%s_answers.pdf"%options.pset
+        filename = "%spset%s_answers.pdf"%(path, options.pset)
         inp = PdfFileReader(file(filename, "rb"))
     except IOError:
         print_err_and_die("Error! File, %s was not found." % filename)
@@ -59,7 +60,7 @@ def split_pset():
         for page in pages:
             out.addPage(inp.getPage(int(page)-1))
 
-        outStream = file("latex/pset%s-%s_answer.pdf"%(options.pset, questionNum), "wb")
+        outStream = file("%spset%s-%s_answer.pdf"%(path, options.pset, questionNum), "wb")
         out.write(outStream)
         outStream.close()
         questionNum +=1
