@@ -9,8 +9,11 @@ Use these scripts to:
 Requirements: 
 
 Jinja2==2.6
+
 pyPdf==1.13
 
 Run the following to get started: 
+```   
     sudo pip install requirements.txt
 
+```
