@@ -1,4 +1,7 @@
 6.046-templating
 ================
 
-6.046 PSet template scripts
+Use this to:
+
+1) Create latex templates with your name.
+2) Split final pset into separate files to upload.
