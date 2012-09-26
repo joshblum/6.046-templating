@@ -55,9 +55,10 @@ def split_pset():
         prob = prob.strip() #kill whitespace
 
         out = PdfFileWriter()
-        pages = prob.split('-')
+        pages = get_pages(prob, inp.getNumPages())
 
         for page in pages:
+            print "page num", str(page)
             out.addPage(inp.getPage(int(page)-1))
 
         outStream = file("%spset%s-%s_answer.pdf"%(path, options.pset, questionNum), "wb")
@@ -67,6 +68,16 @@ def split_pset():
 
     print "Done!"
 
+def get_pages(prob, max_page_count):
+    prob = prob.split('-')
+
+    if len(prob) == 2: # either range , "3-4" or page to end "3-"  
+        start = prob[0]
+        end = prob[1]
+        if end == '':
+            end = max_page_count
+        prob = range(int(start), int(end))
+    return prob
 
 if __name__ == "__main__":
     split_pset()
