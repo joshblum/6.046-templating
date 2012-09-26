@@ -14,6 +14,6 @@ pyPdf==1.13
 
 Run the following to get started: 
 ```   
-    sudo pip install requirements.txt
+    sudo pip install -r requirements.txt
 
 ```
