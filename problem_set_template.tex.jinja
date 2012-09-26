@@ -1,0 +1,55 @@
+%6.046 Fall 2012 Problem Set Template
+%This is an example template for using LaTex to write up solutions for your problem sets. It is NOT required that you
+%use this template. If you will use another template, however, please make sure it is clear which problem set is being
+%handed in, your name, your collaborators for each problem, etc, and that the format is neat. Please make sure to 
+%replace the pre-set values in this template (such as your name, problem set number, etc) with the correct values.
+
+\documentclass[12pt]{article}
+
+%These two lines will give the problem set number and you rname
+\newcommand{\name}{Joshua Blum}
+\newcommand{\problemset}{Problem Set {{ psetnumber }}}
+
+%\pagestyle{headings}
+\usepackage[dvips]{graphics,color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{enumerate}
+\setlength{\parskip}{1pc}
+\setlength{\parindent}{0pt}
+\setlength{\topmargin}{-3pc}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{0pc}
+\setlength{\evensidemargin}{0pc}
+\setlength{\textwidth}{6.5in}
+
+\newcommand{\answer}[2]{
+\newpage
+\noindent
+\framebox{
+	\vbox{
+		6.046 Homework \hfill {\bf \problemset}
+		\hfill #1 \\ 
+		\name \hfill \today \\
+                Collaborators: #2
+	}
+}
+\bigskip
+
+}
+
+\begin{document}
+
+
+%The \answer tag begins a new page for your answer. The first argument is the problem number, and the second argument is your collaborators.
+{% for problem_number  in problems %}
+
+\answer{Problem {{ problem_number }}}{Collaborators}
+Answer to problem {{ problem_number}}
+
+{% endfor %}
+
+
+\end{document}
