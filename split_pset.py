@@ -70,13 +70,12 @@ def split_pset():
 
 def get_pages(prob, max_page_count):
     prob = prob.split('-')
-
     if len(prob) == 2: # either range , "3-4" or page to end "3-"  
         start = prob[0]
         end = prob[1]
         if end == '':
             end = max_page_count
-        prob = range(int(start), int(end))
+        prob = range(int(start), int(end)+1)
     return prob
 
 if __name__ == "__main__":
