@@ -55,7 +55,7 @@ Run the following to get started:
 
 #Authors
 **Josh Blum**
-+joshblum@mit.edu
++ joshblum@mit.edu
 
 **Louis Sobel**
-+sobel@mit.edu
++ sobel@mit.edu
