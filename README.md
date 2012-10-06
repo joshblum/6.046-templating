@@ -52,3 +52,10 @@ This script should live with startpset.py since the file will be looked for at `
 Run the following to get started: 
   
     sudo pip install -r requirements.txt
+
+#Authors
+**Josh Blum**
++joshblum@mit.edu
+
+**Louis Sobel**
++sobel@mit.edu

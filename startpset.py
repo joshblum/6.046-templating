@@ -5,20 +5,24 @@ import os
 TEMPLATE_TEMPLATE = 'problem_set_template.tex.jinja'
 
 USAGE = """USAGE:
-python startpset.py psetnumber [question count]
 
-will create the following directory strucutre in the current working directory:
+    python startpset.py psetnumber [question count]
 
-pset{{pset number}}
-    \
-     latex
+This command will create the following directory structure in the current working directory:
+
+    pset{{pset number}}
         \
-         pset{{pset number}}_answers.tex
+        latex
+            \
+            pset{{pset number}}_answers.tex
          
-if the folder pset{{pset number}} already exists, will abort.
+If the folder 
 
-question count is an optional paramter to make the templates for that many questions.
-will default to 1
+    pset{{pset number}}
+
+already exists, the script will abort.
+
+Question count is an optional paramter to make the templates for that many questions and will default to 1.
 """
 
 def err(what):
