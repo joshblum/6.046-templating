@@ -30,7 +30,7 @@ You can run the command as follows to split your pset into multiple documents:
 
     python split_pset.py -p 1 -q "1-2, 3"
 
-This will result with 4 new files being creating in the format:
+This will result with 2 new files being creating in the format:
 
     pset1-1_answers.pdf
     pset1-2_answers.pdf
